@@ -1,0 +1,19 @@
+<h2>You're now loged as <%= @infos["uid"] %></h2>
+
+<img src="<%= @infos['picture']%>">
+<ul>
+	<li>
+		<a href="https://dashboard.42.fr/user/profile/<%= @infos['uid'] %>">Dashboard profile</a>
+	</li>
+	<li>
+		<a href="https://intra.42.fr/user/<%= @infos['uid']%>">Intra profile</a>
+	</li>
+</ul>
+<ul>
+<% @infos.each do |a, v|%>
+	<li>
+		<p><%= a %></p>
+		<h6><%= v %></h6>
+	</li>
+<% end %>
+</ul>

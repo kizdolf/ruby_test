@@ -1,0 +1,9 @@
+<% if Student.all.empty? %>
+  	<%= dump_ldap %>
+<% else %>
+  	<%= form_tag(:controller => "home", :action => "intra") do %>
+		login :<%= text_field_tag(:login) %>
+		password :<%= password_field_tag(:mdp) %>
+		<%= submit_tag("connect yourself") %>
+	<% end %>
+<% end %>

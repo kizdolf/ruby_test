@@ -1,0 +1,56 @@
+<%= form_for @student, :html => { :class => 'form-horizontal' } do |f| %>
+  <div class="control-group">
+    <%= f.label :uid, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :uid, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :cn, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :cn, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :uidNumber, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :uidNumber, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :picture, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :picture, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :gidNumber, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :gidNumber, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :mail, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :mail, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :firstName, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :firstName, :class => 'text_field' %>
+    </div>
+  </div>
+  <div class="control-group">
+    <%= f.label :lastName, :class => 'control-label' %>
+    <div class="controls">
+      <%= f.text_field :lastName, :class => 'text_field' %>
+    </div>
+  </div>
+
+  <div class="form-actions">
+    <%= f.submit nil, :class => 'btn btn-primary' %>
+    <%= link_to t('.cancel', :default => t("helpers.links.cancel")),
+                student_path, :class => 'btn' %>
+  </div>
+<% end %>
