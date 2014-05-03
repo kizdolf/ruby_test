@@ -1,11 +1,15 @@
 Rails.application.routes.draw do
+    root 'home#view'
+  devise_for :users
+  
+
   get 'home/view'
 
   get 'home/intra'
 
   get 'home/dash'
 
-  root 'home#view'
+
 
   post 'home/intra'
 

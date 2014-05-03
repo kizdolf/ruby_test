@@ -10,6 +10,14 @@
 <%= link_to "Home", root_path %>
 <%= link_to "Profile", home_intra_path %>
 <%= link_to "Ldap", students_path %>
+
+<% if notice %>
+  <p class="alert alert-success"><%= notice %></p>
+<% end %>
+<% if alert %>
+  <p class="alert alert-danger"><%= alert %></p>
+<% end %>
+
 <%= yield %>
 
 </body>
